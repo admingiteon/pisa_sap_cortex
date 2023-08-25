@@ -1,19 +1,21 @@
 constant: CONNECTION_NAME {
-  value: "cortex"
+  value: "cortex_sap_reporting"
   export: override_required
 }
 
 constant: GCP_PROJECT {
-  value: "GCP Project Name"
+  value: "psa-sga-dfn-pr"
   export: override_required
 }
 
 constant: REPORTING_DATASET {
-  value: "Reporting Dataset Name"
+  #value: "reporting_ecc_mx"
+  value: "reporting_s4h_pc1_mx"
   export: override_required
 }
 
 constant: CLIENT {
-  value: "Client ID"
+  #value: "200"
+  value: "100"
   export: override_required
 }

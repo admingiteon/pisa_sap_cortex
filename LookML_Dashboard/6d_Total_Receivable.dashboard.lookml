@@ -1,5 +1,5 @@
 - dashboard: total_receivable
-  title: "[SAP OTC AR] 06_d: Total Receivable"
+  title: "Accounts Receivable - Total Receivables"
   layout: newspaper
   preferred_viewer: dashboards-next
   description: ''
@@ -52,9 +52,9 @@
     y_axes: [{label: '', orientation: left, series: [{axisId: data_intelligence_ar.OverDue_Amount,
             id: data_intelligence_ar.OverDue_Amount, name: OverDue Amount}, {axisId: data_intelligence_ar.Due_Amount,
             id: data_intelligence_ar.Due_Amount, name: Due Amount}], showLabels: true,
-        showValues: true, valueFormat: '0,"K"', unpinAxis: false, tickDensity: default,
+        showValues: true, valueFormat: '', unpinAxis: false, tickDensity: default,
         tickDensityCustom: 5, type: linear}]
-    label_value_format: 0.00,"K"
+    label_value_format: ''
     series_colors:
       data_intelligence_ar.OverDue_Amount: "#AEC8C1"
       data_intelligence_ar.Due_Amount: "#FDEC85"
@@ -75,7 +75,7 @@
     explore: data_intelligence_ar
     type: looker_grid
     fields: [data_intelligence_ar.Company_Code, data_intelligence_ar.Company_Name,
-      data_intelligence_ar.Fiscal_Year, data_intelligence_ar.Sold_to_Party_Name, data_intelligence_ar.Accounting_Document,
+      data_intelligence_ar.PeriodCalc, data_intelligence_ar.Sold_to_Party_Name, data_intelligence_ar.Accounting_Document,
       data_intelligence_ar.Posting_date, data_intelligence_ar.Local_Currency_Key,
       data_intelligence_ar.Accounts_Receivable_Local_Currency, data_intelligence_ar.Global_Currency_Key,
       data_intelligence_ar.Accounts_Receivable_Global_Currency]
@@ -175,7 +175,7 @@
   - name: Currency
     title: Currency
     type: field_filter
-    default_value: USD
+    default_value: "{{ _user_attributes['default_value_currency_required'] }}"
     allow_multiple_values: true
     required: false
     ui_config:

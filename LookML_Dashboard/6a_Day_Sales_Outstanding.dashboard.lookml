@@ -1,5 +1,5 @@
 - dashboard: day_sales_outstanding
-  title: "[SAP OTC AR] 06_a: Day Sales Outstanding"
+  title: "Accounts Receivable - Days Sales Outstanding"
   layout: newspaper
   preferred_viewer: dashboards-next
   description: ''
@@ -222,7 +222,7 @@
   - name: Currency
     title: Currency
     type: field_filter
-    default_value: USD
+    default_value: "{{ _user_attributes['default_value_currency_required'] }}"
     allow_multiple_values: true
     required: false
     ui_config:
