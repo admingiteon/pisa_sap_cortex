@@ -28,7 +28,11 @@ view: data_intelligence_ar {
       label: "JPY"
       value: "JPY"
     }
-    default_value: "USD"
+    allowed_value: {
+      label: "MXN"
+      value: "MXN"
+    }
+    default_value: "MXN"
   }
 
   parameter: Day_Sales_Outstanding {
